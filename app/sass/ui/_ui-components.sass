@@ -1,0 +1,73 @@
+body
+  margin: 0
+  font-weight: normal
+  font-size: 16px
+  color: #474167
+  font-family: 'Ubuntu', sans-serif
+  background: #fff url(../img/bg.jpg) 0 0
+  position: relative
+  z-index: 1
+
+  & *
+    margin: 0
+    padding: 0
+    border: 0
+    outline: 0
+    background-color: transparent
+    box-sizing: border-box
+
+a
+  text-decoration: none
+  transition: .3s
+  color: inherit
+
+ul
+  list-style: none
+
+img
+  max-width: 100%
+
+button
+  cursor: pointer
+
+label
+  cursor: pointer
+
+section
+  flex-grow: 1
+
+select, input, textarea
+  border-radius: 0
+  background-color: transparent
+
+.content-wrapper
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+.page-wrapper
+  flex: 1 1
+
+.footer-wrapper
+  flex: 0 1
+
+.box
+  width: 100%
+  display: flex
+  max-width: 90%
+  padding: 0 30px
+  margin: 0 auto
+  position: relative
+  flex-direction: column
+
+  @include media( 1400 )
+    max-width: 1170px
+    padding: 0 15px
+
+  &.wrap
+    flex-wrap: wrap
+    
+.row
+  min-width: 100%
+  display: flex
+  margin: 0 -30px
