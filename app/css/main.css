@@ -102,6 +102,82 @@ select, input, textarea {
   display: flex;
   margin: 0 -30px; }
 
+.main {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  width: 100%; }
+  .main .main-content {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #ffffff; }
+    .main .main-content__title {
+      font-family: 'Exo 2', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 43px;
+      letter-spacing: 0.015em;
+      margin-bottom: 12px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .main .main-content__subtitle {
+      font-family: 'Open Sans', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 27px;
+      letter-spacing: 0.02em;
+      margin-bottom: 65px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .main .main-content .how-it-cost {
+      width: 269px;
+      height: 68.9px;
+      background: #3ABEC2;
+      -webkit-border-radius: 39.5px;
+              border-radius: 39.5px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-family: 'Exo 2', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      border: 1px solid #3ABEC2;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s; }
+      .main .main-content .how-it-cost:hover {
+        -webkit-transition: .2s;
+        -o-transition: .2s;
+        transition: .2s;
+        background-color: rgba(58, 190, 194, 0.2); }
+
 .header {
   position: absolute;
   z-index: 2;
