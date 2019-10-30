@@ -62,11 +62,6 @@ select, input, textarea
   margin: 0 auto
   position: relative
   flex-direction: column
-
-  @include media( 1400 )
-    max-width: 1170px
-    padding: 0 15px
-
   &.wrap
     flex-wrap: wrap
     
@@ -74,3 +69,35 @@ select, input, textarea
   min-width: 100%
   display: flex
   margin: 0 -30px
+
+
+button
+  position: relative
+  overflow: hidden
+
+  &:after
+    content: ""
+    width: 7px
+    height: calc(100% + 20px)
+    transform: rotate(28deg)
+    background: rgba(255,255,255,.3)
+    display: block
+    position: absolute
+    left: 0
+    top: -5px
+    animation-timing-function: ease-in-out
+    animation-name: buttonAnimation
+    animation-duration: 3s
+    animation-iteration-count: infinite
+
+@keyframes buttonAnimation
+  0% 
+    left: -30px
+    margin-left: 0px
+  30%
+    left: 110%
+    margin-left: 80px
+  100% 
+    left: 110%
+    margin-left: 80px
+    

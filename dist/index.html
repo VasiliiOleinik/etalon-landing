@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="assets/img/favicon.ico" rel="shortcut icon">
+    <link type="text/css" href="css/libs.min.css" rel="stylesheet">
+    <link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo|Exo+2:300,400,500,600,700|Open+Sans:400,600,700&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+    <link type="text/css" href="css/main.css" rel="stylesheet">
+    <title>Ethalon Landing</title>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <div class="content-wrapper" id="contentWrapper">
+      <div class="page-wrapper" id="pageWrapper">
+        <header class="header">
+          <div class="box">
+            <div class="header-content">
+              <div class="header__name"><span class="header__name-text name">эталон</span>
+                <div class="header__logo">
+                  <div class="header__logo-circle"><span class="header__logo-text">Ъ</span></div>
+                </div><span class="header__name-text">Строительство бассейнов и СПА зон</span>
+              </div>
+              <div class="header__contacts">
+                <div class="callback-container">
+                  <button class="header__contacts-callback" id="callback-btn-js">Заказать звонок</button>
+                  <div class="callback-form" id="call-back-form-js">
+                    <form method="post">
+                      <input class="callback-form__input" type="text" placeholder="+7 (999) 803-18-51">
+                      <button class="callback-form__submit-btn" type="submit">Заказать звонок</button>
+                    </form>
+                  </div>
+                </div>
+                <div class="header__contacts-phones"><span class="header__contacts-phone">+7 (495) 745-27-03</span><span class="header__contacts-phone">+7 (985) 210-31-68</span></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <div class="box">
+            <div class="main-content">
+              <h1 class="main-content__title">Получите автоматический расчет <br/> стоимости строительства хаммама за 1 минуту</h1><span class="main-content__subtitle">Пройдите короткий опрос и получите скидку на <br/> комплект оборудования</span>
+              <button class="how-it-cost" id="how-it-cost-js">Узнать стоимость</button>
+            </div>
+          </div>
+        </main>
+        <div class="main-test-block">
+          <div class="main-test-block__nav-dots">
+            <div class="nav-elem active" id="first"></div>
+            <div class="nav-elem" id="second"></div>
+            <div class="nav-elem" id="third"></div>
+            <div class="nav-elem" id="fourth"></div>
+            <div class="nav-elem" id="fifth"></div>
+            <div class="nav-elem" id="sixth"></div>
+          </div>
+          <div class="main-test-block__nav-text">
+            <div class="nav-text-alem__prev"><span>Назад</span></div>
+            <div class="nav-text-alem__next active"><span>Далее</span></div>
+          </div>
+          <div class="main-test-block__content">
+            <form method="post">
+              <div class="content__elem first"><span class="test-block__title">Шаг 1. Укажите размеры</span>
+                <div class="intractive-pool">
+                  <div class="pool">
+                    <div class="polzunok-container polzunok-container-1">
+                      <div id="slider-left"></div>
+                    </div>
+                    <div class="polzunok-container polzunok-container-2">
+                      <div id="slider-right"></div>
+                    </div>
+                    <div class="polzunok-container polzunok-container-3">
+                      <div id="slider-top"></div>
+                    </div>
+                    <div class="input-interactive -width">
+                      <div class="text-interactive">Длина</div>
+                      <input class="onlyDigits input-pool-dimensions" id="pool--length" type="text" value="5">
+                    </div>
+                    <div class="input-interactive -length">
+                      <div class="text-interactive">Ширина</div>
+                      <input class="onlyDigits input-pool-dimensions" id="pool--width" type="text" value="10">
+                    </div>
+                    <div class="input-interactive -height">
+                      <div class="text-interactive">Высота</div>
+                      <input class="onlyDigits input-pool-dimensions" id="pool-height" type="text" value="1">
+                    </div>
+                    <div class="poolarea" id="poolarea"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="content__elem second"><span class="test-block__title">Шаг 2. Когда планируете строительство?</span>
+                <div class="content">
+                  <label class="label">
+                    <input id="this-month" name="radio-date" type="radio" value="В этом месяце" checked><span class="custom-radio"></span><span class="label-text">В этом месяце</span>
+                  </label>
+                  <label class="label">
+                    <input id="1-3-month" name="radio-date" type="radio" value="В течение 1 - 3 месяцев"><span class="custom-radio"></span><span class="label-text">В течение 1 - 3 месяцев</span>
+                  </label>
+                  <label class="label">
+                    <input id="1-3-month" name="radio-date" type="radio" value="В течение 1 - 3 месяцев"><span class="custom-radio"></span><span class="label-text">В течение 1 - 3 месяцев</span>
+                  </label>
+                  <label class="label">
+                    <input id="more-6" name="radio-date" type="radio" value="Более 6 месяцев"><span class="custom-radio"></span><span class="label-text">Более 6 месяцев</span>
+                  </label>
+                </div>
+              </div>
+              <div class="content__elem third"><span class="test-block__title">Шаг 3. Выберите производителя оборудования</span>
+                <div class="content">
+                  <div class="content-section">
+                    <label class="label">
+                      <input id="premium" name="radio-producer" type="radio" value="Премиум"><span class="custom-radio"></span><span class="label-text bold">Премиум</span><span class="label-text smaller">Германия</span>
+                    </label><span class="additional-text">Один раз оплачиваете и забываете на всю жизнь. Для тех, кто привык получать самое лучшее!</span>
+                  </div>
+                  <div class="content-section">
+                    <label class="label">
+                      <input id="optimal" name="radio-producer" type="radio" value="Оптимальный" checked><span class="custom-radio"></span><span class="label-text bold">Оптимальный</span><span class="label-text smaller">Франция/Испания</span>
+                    </label><span class="additional-text">Надежный вариант за умеренную стоимость. Идеально подходит для длительного использования.</span>
+                  </div>
+                  <div class="content-section">
+                    <label class="label">
+                      <input id="basic" name="radio-producer" type="radio" value="Базовый"><span class="custom-radio"></span><span class="label-text bold">Базовый</span><span class="label-text smaller">Россия/Китай</span>
+                    </label><span class="additional-text">Рабочий вариант по привлекательной цене со средними характеристиками.</span>
+                  </div>
+                  <div class="content-section">
+                    <label class="label">
+                      <input id="individual" name="radio-producer" type="radio" value="Индивидуальный"><span class="custom-radio"></span><span class="label-text bold">Индивидуальный</span>
+                    </label><span class="additional-text">Требуется выезд инженера компании ЭТАЛОНЪ на ваш объект.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content__elem fourth"><span class="test-block__title">Шаг 4. Где будет расположен хамам?</span>
+                <div class="content">
+                  <label class="label">
+                    <input id="in-flat" name="radio-place" type="radio" value="В Квартире"><span class="custom-radio"></span><span class="label-text">В Квартире</span>
+                  </label>
+                  <label class="label">
+                    <input id="private-house" name="radio-place" type="radio" value="В Частном доме / на даче" checked><span class="custom-radio"></span><span class="label-text">В Частном доме / на даче</span>
+                  </label>
+                  <label class="label">
+                    <input id="fitness-centre" name="radio-place" type="radio" value="В Фитнес-центре"><span class="custom-radio"></span><span class="label-text">В Фитнес-центре</span>
+                  </label>
+                  <label class="label">
+                    <input id="aqua-park" name="radio-place" type="radio" value="В Аква-парке"><span class="custom-radio"></span><span class="label-text">В Аква-парке</span>
+                  </label>
+                </div>
+              </div>
+              <div class="content__elem fifth"><span class="test-block__title">Шаг 5. Куда вам прислать расчет?</span>
+                <div class="content">
+                  <div class="content-section">
+                    <label class="label">
+                      <input id="in-flat" name="radio-place" type="radio" value="В Квартире"><span class="custom-radio"></span><span class="label-text"><img src="img/phone-ico.png" alt="Phone">Телефон</span>
+                    </label>
+                  </div>
+                  <div class="content-section">
+                    <label class="label">
+                      <input id="private-house" name="radio-place" type="radio" value="В Частном доме / на даче" checked><span class="custom-radio"></span><span class="label-text"><img src="img/whats-app-ico.png" alt="WhatsApp">WhatsApp</span>
+                    </label>
+                  </div>
+                  <div class="content-section">
+                    <label class="label">
+                      <input id="fitness-centre" name="radio-place" type="radio" value="В Фитнес-центре"><span class="custom-radio"></span><span class="label-text"> <img src="img/telegram-ico.png" alt="Telegram">Telegram</span>
+                    </label>
+                  </div>
+                  <div class="content-section">
+                    <label class="label">
+                      <input id="aqua-park" name="radio-place" type="radio" value="В Аква-парке"><span class="custom-radio"></span><span class="label-text"><img src="img/sms-ico.png" alt="SMS">SMS</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="content__elem sixth"><span class="test-block__title">Расчет стоимости строительства хаммама готов!</span><span class="test-block__subtitle"> Введите свой номер телефона и получите расчет и скидку за прохождение теста</span>
+                <div class="final-form">
+                  <input class="final-form__input" type="text" placeholder="Введите телефонный номер*">
+                  <button class="final-form__submit-btn" type="submit">Узнать стоимость</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-wrapper" id="footerWrapper">
+        <footer class="footer">
+          <div class="box">
+            <div class="footer-content"><span class="footer-copyright">© СК ООО «ЭТАЛОНЪ</span><span class="footer-bussines-numbers">ИНН: 7722526444, ОГРН: 1047796735711</span><a class="footer-politics" href="/">Политика конфиденциальности</a></div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/pool.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
