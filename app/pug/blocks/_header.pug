@@ -8,7 +8,12 @@ header.header
                 span(class="header__logo-text") Ъ
             span(class="header__name-text") Строительство бассейнов и СПА зон
         .header__contacts
-          button(class="header__contacts-callback") Заказать звонок
+          .callback-container
+            button(class="header__contacts-callback" id="callback-btn-js") Заказать звонок
+            .callback-form#call-back-form-js
+              form(method="post")
+                input(type="text" class="callback-form__input" placeholder="+7 (999) 803-18-51")
+                button(type="submit" class="callback-form__submit-btn") Заказать звонок
           .header__contacts-phones
             span(class="header__contacts-phone") +7 (495) 745-27-03
             span(class="header__contacts-phone") +7 (985) 210-31-68

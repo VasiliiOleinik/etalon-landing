@@ -78,6 +78,10 @@ $(function() {
     // 	},
     //   })
   });
+
+	$("#callback-btn-js").on('click', function(){
+		$('#call-back-form-js').slideToggle();
+	});
 });
 
 //   var i = 0;
