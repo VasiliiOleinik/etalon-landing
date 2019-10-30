@@ -116,6 +116,23 @@
 	
 	.main-test-block__content .content__elem .test-block__title
 		font-size: 22px
+	
+	.content__elem.sixth
+		max-width: 800px
+		margin: 0 auto
+	
+	.main-test-block__content .content__elem .test-block__title
+		margin-bottom: 30px
+		justify-content: flex-start
+	
+	.content__elem.sixth .test-block__subtitle
+		margin-bottom: 30px
+
+	.content__elem.sixth
+		padding: 0px 15px
+	
+	.main-test-block__content .content__elem .test-block__title
+		justify-content: center
 
 @include media( 767 )
 	.header__contacts .callback-container
@@ -162,8 +179,12 @@
 	.box
 		padding: 0px 15px
 
-	.main-test-block__content .content__elem .test-block__title
-		font-size: 14px
+	.main-test-block__content .content__elem.sixth .test-block__title
+		font-size: 22px
+		margin-bottom: 30px
+		line-height: 26px
+		letter-spacing: 0.015em
+		text-align: left
 
 	.pool
 		width: 191.27px
@@ -234,6 +255,37 @@
 	
 	.content__elem.fifth .content .content-section .label
 		width: 140px
+
+	.content__elem.sixth .final-form
+		flex-direction: column
+	
+	.content__elem.sixth .final-form__input
+		margin-bottom: 50px
+
+	.content__elem.sixth
+		max-width: 395px
+	
+	.content__elem.sixth .test-block__subtitle
+		font-size: 14px
+		line-height: 19px
+		letter-spacing: 0.015em
+		color: rgba(255, 255, 255, 0.6)
+		margin-bottom: 30px
+		width: 415.49px
+		height: 57.71px
+		font-weight: 300
+		font-size: 14px
+		line-height: 19px
+		letter-spacing: 0.015em
+		color: rgba(255, 255, 255, 0.68)
+
+	.content__elem.sixth .final-form__submit-btn
+		width: 215.18px
+		height: 57.36px
+		font-weight: bold
+		font-size: 14px
+		line-height: 19px
+		letter-spacing: 0.02em
 
 @include media( 400 )
 	.main .main-content__title
