@@ -4,7 +4,7 @@
 	left: 0
 	width: 100%
 
-	& .main-content 
+	& .main-content
 		width: 100%
 		display: flex
 		flex-direction: column
@@ -29,7 +29,7 @@
 			letter-spacing: 0.02em
 			margin-bottom: 65px
 			display: flex
-		
+
 		& .how-it-cost
 			width: 269px
 			height: 68.9px
@@ -52,3 +52,594 @@
 				transition: .2s
 				background-color: rgba(58, 190, 194, .2)
 
+#overlay
+	background: rgba(0, 0, 0, 0.4)
+	position: absolute
+	width: 100%
+	height: 100%
+	left: 0
+	top: 0
+	z-index: 2
+	display: none
+
+.main-test-block
+	max-width: 1360px
+	width: 100%
+	position: absolute
+	top: 0
+	left: 50%
+	transform: translateX(-50%)
+	height: 100%
+	z-index: 4
+	display: none
+
+	&__nav-dots
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		display: flex
+		flex-direction: column
+
+		& .nav-elem
+			width: 20.18px
+			height: 20.18px
+			border: 1px solid rgba(255, 255, 255, 0.7)
+			box-sizing: border-box
+			margin-bottom: 35px
+			cursor: pointer
+			transition: .2s
+			border-radius: 50%
+
+			&:hover,
+			&.active
+				background: rgba(255, 255, 255, 0.75)
+				transition: .2s
+
+			&:last-of-type
+				margin-bottom: 0px
+
+	&__nav-text
+		position: absolute
+		top: 50%
+		right: 0
+		transform: translateY(-50%)
+		display: flex
+		flex-direction: column
+
+		& .nav-text-alem__next
+			font-family: 'Open Sans', sans-serif
+			font-style: normal
+			font-weight: 300
+			font-size: 18px
+			line-height: 25px
+			letter-spacing: 0.015em
+			transform: rotate(90deg)
+			transition: .2s
+			margin-top: 80px
+			cursor: pointer
+			position: relative
+			color: rgba(255, 255, 255, 1)
+			opacity: 0.7
+
+			&:after
+				content: url(../img/big-arrow.png)
+				display: block
+				position: absolute
+				left: calc(100% + 60px)
+				top: -30px
+				transform: rotate(-90deg)
+
+			&:hover,
+			&.active
+				opacity: 1
+				transition: .2s
+
+		& .nav-text-alem__prev
+			font-family: 'Open Sans', sans-serif
+			font-style: normal
+			font-weight: 300
+			font-size: 18px
+			line-height: 25px
+			letter-spacing: 0.015em
+			transform: rotate(90deg)
+			transition: .2s
+			cursor: pointer
+			position: relative
+			color: rgba(255, 255, 255, 1)
+			opacity: 0.7
+
+			&:before
+				content: url(../img/big-arrow.png)
+				display: block
+				position: absolute
+				right: calc(100% + 60px)
+				top: -30px
+				transform: rotate(90deg)
+
+			&:hover,
+			&.active
+				opacity: 1
+				transition: .2s
+
+	&__content
+		max-width: 900px
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		overflow: hidden
+
+		& .content__elem
+			width: 100%
+			height: 100%
+			display: flex
+			flex-direction: column
+			align-items: center
+
+			& .test-block__title
+				font-family: 'Exo 2', sans-serif
+				font-style: normal
+				font-weight: bold
+				font-size: 26px
+				line-height: 31px
+				letter-spacing: 0.015em
+				color: #FFFFFF
+				display: flex
+				width: 100%
+				text-align: center
+				justify-content: center
+				align-items: center
+				margin-bottom: 150px
+
+			&.first
+				display: flex
+				border-radius: 30px 30px 0px 0px
+
+.intractive-pool
+	width: 100%
+	padding-top: 80px
+	  padding-bottom: 100px
+.pool
+	position: relative
+	margin-left: auto
+	margin-right: auto
+	width: 534.27px
+	height: 360.8px
+	border: 2px solid #FFFFFF
+	box-sizing: border-box
+	border-radius: 21px
+.poolarea
+	position: absolute
+	width: 270px
+	height: 155px
+	left: 0px
+	top: 0px
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	background: rgba(69, 157, 156, 0.58)
+	border-radius: 21px
+
+.text-interactive
+	font-family: Open Sans
+	font-style: normal
+	font-weight: 300
+	font-size: 18px
+	line-height: 25px
+	letter-spacing: 0.015em
+	color: #FFFFFF
+	margin-bottom: 12px
+.input-interactive
+	width: 90px
+	&.-width
+		width: 100%
+		height: auto
+		position: absolute
+		top: -145px
+		left: 50%
+		transform: translateX(-50%)
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		.text-interactive
+			width:  100%
+			margin-bottom: 12px
+			display: flex
+			justify-content: center
+		.input-pool-dimensions
+			display: inline-block
+	&.-height
+		right: 0
+.input-pool-dimensions
+	width: 60px
+	height: 30px
+	margin: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 0px
+	margin: 0px
+	text-align: center
+.input-interactive.-height
+	top: 50%
+	transform: translateY(-50%)
+	right: -170px
+	position: absolute
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+.input-interactive.-length
+	position: absolute
+	bottom: 115px
+	left: -170px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+.ui-spinner
+	width: 60px
+	height: 30px
+	background-color: transparent
+	border: 1px solid rgba(255, 255, 255, 0.7)
+	box-sizing: border-box
+	border-radius: 5px
+	font-family: "Open Sans", sans-serif
+	font-weight: 300
+	font-size: 18px
+	line-height: 25px
+	letter-spacing: 0.015em
+	color: #FFFFFF
+	top: 0
+	position: relative
+	overflow: initial
+.ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
+	border: none
+	background: transparent
+.ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus
+	background: transparent
+	border: none
+.ui-spinner-up
+	.ui-icon
+		-webkit-transform: rotate(180deg)
+		transform: rotate(180deg)
+.polzunok-container
+	.ui-widget-content
+		border: none
+.slider-left,
+#slider-left
+	left: -50px
+	top: 0px
+	width: 4px
+	height: 100%
+	position: absolute
+	background-color: #FFA65A
+.slider-right,
+#slider-right
+	right: -50px
+	top: 0px
+	width: 4px
+	height: 100%
+	position: absolute
+.slider-top,
+#slider-top
+	position: absolute
+	top: -50px
+	width: 100%
+	height: 4px
+.polzunok-container-1 .ui-state-default,
+.polzunok-container-2 .ui-state-default,
+.polzunok-container-1 .ui-widget-content .ui-state-default,
+.polzunok-container-2 .ui-widget-content .ui-state-default,
+.polzunok-container-1 .ui-widget-header .ui-state-default,
+.polzunok-container-2 .ui-widget-header .ui-state-default,
+.polzunok-container-1 .ui-button,
+.polzunok-container-2 .ui-button,
+html .polzunok-container-1 .ui-button.ui-state-disabled:hover,
+html .polzunok-container-2 .ui-button.ui-state-disabled:hover,
+html .polzunok-container-1 .ui-button.ui-state-disabled:active,
+html .polzunok-container-2 .ui-button.ui-state-disabled:active
+	width: 17px
+	height: 17px
+	background: #D8CCCC
+	border-radius: 50%
+	outline: none
+	border: none
+.polzunok-container-3 .ui-state-default,
+.polzunok-container-3 .ui-widget-content .ui-state-default,
+.polzunok-container-3 .ui-widget-header .ui-state-default,
+.polzunok-container-3 .ui-button,
+html .polzunok-container-3 .ui-button.ui-state-disabled:hover,
+html .polzunok-container-3 .ui-button.ui-state-disabled:active
+	width: 17px
+	height: 17px
+	background: #D8CCCC
+	border-radius: 50%
+	outline: none
+	border: none
+.polzunok-container-1 .ui-slider-vertical .ui-slider-handle,
+.polzunok-container-2 .ui-slider-vertical .ui-slider-handle
+	left: -7px
+.polzunok-container-3
+	.ui-slider-horizontal
+		.ui-slider-handle
+			top: -7px
+.polzunok-container-2 .ui-slider-range.ui-slider-range-min,
+.polzunok-container-3 .ui-slider-range.ui-slider-range-min
+	background-color: #FFA65A
+
+.input-interactive.-width .ui-button:nth-of-type(1)
+	position: absolute
+	right: -40px
+	top: 50%
+	transform: translateY(-50%)
+	width: 10px
+	height: 15px
+	background-image: url(../img/arrow-right.png)
+	background-repeat: no-repeat
+	background-position:  50% 50%
+	background-size: cover
+
+.input-interactive.-width .ui-button:nth-of-type(2)
+	position: absolute
+	right: -25px
+	top: 50%
+	transform: translateY(-50%)
+	width: 10px
+	height: 15px
+	background-image: url(../img/arrow-left.png)
+	background-repeat: no-repeat
+	background-position:  50% 50%
+	background-size: cover
+
+.input-interactive.-height .ui-button:nth-of-type(1),
+.input-interactive.-length .ui-button:nth-of-type(1)
+	position: absolute
+	right: -25px
+	top: 0
+	width: 10px
+	height: 15px
+	background-image: url(../img/arrow-right.png)
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	-webkit-background-size: cover
+	background-size: cover
+	transform: rotate(-90deg)
+
+.input-interactive.-height .ui-button:nth-of-type(2),
+.input-interactive.-length .ui-button:nth-of-type(2)
+	position: absolute
+	right: -25px
+	bottom: 0
+	width: 10px
+	height: 15px
+	background-image: url(../img/arrow-right.png)
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	-webkit-background-size: cover
+	background-size: cover
+	transform: rotate(90deg)
+
+.content__elem.second
+	& .content
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-start
+
+		& .label
+			margin-bottom: 65px
+
+.content__elem.third
+	& .content
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-start
+
+		& .content-section
+			margin-bottom: 65px
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			align-items: flex-start
+			max-width: 515px
+			width: 100%
+
+			& .label
+				margin-bottom: 20px
+
+			& .additional-text
+				padding-left: 30px
+				font-family: 'Exo 2', sans-serif
+				font-style: normal
+				font-weight: normal
+				font-size: 14px
+				line-height: 24px
+				letter-spacing: 0.02em
+				color: #FFFFFF
+
+.content__elem.fourth
+	& .content
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-start
+
+		& .label
+			margin-bottom: 65px
+
+.content__elem.fifth
+	& .content
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		max-width: 550px
+		width: 100%
+
+		& .content-section
+			margin-bottom: 135px
+			display: flex
+			width: 160px
+
+			&:nth-of-type(odd)
+				margin-right: 125px
+
+			& .label
+				display: flex
+				align-items: center
+
+				& .label-text
+					display: flex
+					align-items: center
+
+					& img
+						margin-right: 10px
+
+.content__elem.sixth
+	align-items: flex-start
+
+	& .test-block__title
+		font-family: 'Exo 2', sans-serif
+		font-style: normal
+		font-weight: bold
+		font-size: 36px
+		line-height: 43px
+		letter-spacing: 0.015em
+		color: #FFFFFF
+		margin-bottom: 25px
+
+	& .test-block__subtitle
+		font-family: "Open Sans", sans-serif
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 25px
+		letter-spacing: 0.015em
+		color: rgba(255, 255, 255, 0.6)
+		max-width: 640px
+		width: 100%
+		display: flex
+		border-top: 1px solid rgba(255, 255, 255, 0.6)
+		padding-top: 25px
+		margin-bottom: 65px
+	
+	& .final-form
+		width: 100%
+		display: flex
+
+		&__input
+			width: 496.07px
+			height: 68.9px
+			border: 1px solid rgba(255, 255, 255, 0.91)
+			box-sizing: border-box
+			box-shadow: 0px 0px 4px #000000
+			border-radius: 39.5px
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 22px 65px
+			font-family: "Open Sans", sans-serif
+			font-style: normal
+			font-weight: 300
+			font-size: 18px
+			line-height: 25px
+			letter-spacing: 0.015em
+			color: rgba(255, 255, 255, 0.68)
+			background: rgba(0, 0, 0, 0.21)
+			transition: .2s
+			margin-right: 70px
+
+			&:focus
+				transition: .2s
+				background: rgba(0, 0, 0, 0.41)
+		
+		&__submit-btn
+			width: 269px
+			height: 68.9px
+			background: #3ABEC2
+			border-radius: 39.5px
+			display: flex
+			justify-content: center
+			align-items: center
+			font-family: 'Exo 2', sans-serif
+			font-style: normal
+			font-weight: bold
+			font-size: 20px
+			line-height: 24px
+			letter-spacing: 0.02em
+			color: #ffffff
+			border: 1px solid #3ABEC2
+			transition: .2s
+
+			&:hover
+				transition: .2s
+				background-color: rgba(58, 190, 194, .2)
+
+		
+.label
+	position: relative
+
+	& .label-text
+		font-family: "Open Sans", sans-serif
+		font-style: normal
+		font-weight: normal
+		font-size: 24px
+		line-height: 33px
+		letter-spacing: 0.015em
+		color: #FFFFFF
+		margin-left: 30px
+
+		&.bold
+			font-family: 'Exo 2', sans-serif
+			font-style: normal
+			font-weight: bold
+			font-size: 20px
+			line-height: 24px
+			letter-spacing: 0.02em
+
+		&.smaller
+			font-family: 'Exo 2', sans-serif
+			font-style: normal
+			font-weight: normal
+			font-size: 20px
+			line-height: 24px
+			letter-spacing: 0.02em
+
+	& input
+		position: absolute
+		opacity: 0
+		cursor: pointer
+		height: 0
+		width: 0
+
+		&:checked
+			& ~ .custom-radio
+				&:after
+					display: block
+	.custom-radio
+		&:after
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 13.97px
+			height: 13.97px
+			border-radius: 50%
+			background: white
+
+.custom-radio
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	left: -30px
+	height: 25px
+	width: 25px
+	border-radius: 50%
+	border: 1px solid #FFFFFF
+	box-sizing: border-box
+	&:after
+		content: ""
+		position: absolute
+		display: none
