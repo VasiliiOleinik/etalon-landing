@@ -67,7 +67,7 @@
 
 	.main-test-block__nav-text
 		top: initial
-		bottom: 115px
+		bottom: 140px
 		right: 50%
 		transform: translateX(50%)
 		flex-direction: row
@@ -114,25 +114,20 @@
 		&:last-of-type
 			margin-bottom: 0px
 	
-	.main-test-block__content .content__elem .test-block__title
-		font-size: 22px
-	
 	.content__elem.sixth
 		max-width: 800px
 		margin: 0 auto
 	
 	.main-test-block__content .content__elem .test-block__title
-		margin-bottom: 30px
-		justify-content: flex-start
+		font-size: 22px
+		margin-bottom: 80px
+		justify-content: center
 	
 	.content__elem.sixth .test-block__subtitle
 		margin-bottom: 30px
 
 	.content__elem.sixth
 		padding: 0px 15px
-	
-	.main-test-block__content .content__elem .test-block__title
-		justify-content: center
 
 @include media( 767 )
 	.header__contacts .callback-container
@@ -245,7 +240,8 @@
 	.content__elem.third .content .content-section
 		max-width: 320px
 	
-	.footer-content
+	.footer-content,
+	.footer
 		height: auto
 		padding-top: 20px
 		flex-wrap: wrap
@@ -287,6 +283,52 @@
 		line-height: 19px
 		letter-spacing: 0.02em
 
+	.input-interactive.-width
+		top: -100px
+	
+	.footer-content 
+		font-size: 14px
+	
+	.footer-copyright
+		order: 1
+	
+	.footer-bussines-numbers
+		order: 3
+
+@include media( 650 )
+	.content__elem.sixth .final-form__input,
+	.content__elem.sixth .test-block__subtitle
+		width: 100%
+
+@include media( 550 )
+	.content__elem.sixth .final-form__input
+		padding: 20px
+
 @include media( 400 )
 	.main .main-content__title
 		font-size: 15px
+
+	.main-test-block__nav-text .nav-text-alem__next,
+	.main-test-block__nav-text .nav-text-alem__prev
+		font-weight: 300
+		font-size: 18px
+		line-height: 25px
+		letter-spacing: 0.015em
+
+	.main-test-block__nav-text .nav-text-alem__next:after,
+	.main-test-block__nav-text .nav-text-alem__prev:after
+		height: 85px
+	
+	.content__elem.third .content .content-section
+		max-width: 240px
+	
+	.content__elem.third .content .content-section .additional-text
+		line-height: 16px
+
+	.custom-radio
+		left: -10px
+
+@include media( 370 )
+	.main-test-block__nav-text .nav-text-alem__next,
+	.main-test-block__nav-text .nav-text-alem__prev
+		font-size: 14px

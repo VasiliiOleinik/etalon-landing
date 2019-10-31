@@ -78,7 +78,7 @@ $(function() {
   $(".nav-text-alem__next").on("click", function() {
 	i + 1;
     if (i >= 4) {
-      return nextSlide((i = 4));
+      return nextSlide((i = 5));
     } else {
       return prevSlide(i++);
     }
