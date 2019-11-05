@@ -1,5 +1,5 @@
 $(function() {
-  $('.header').css({"margin-bottom":"30px"});
+  $(".header").css({ "margin-bottom": "30px" });
   // Открытие теста
   $("#how-it-cost-js").on("click", function() {
     $(".main-content, #overlay, .main-test-block, .footer").slideToggle();
@@ -10,14 +10,14 @@ $(function() {
         "min-height": "830px",
         height: "100%"
       });
-      $('.header').css({"margin-bottom":"0px"});
+      $(".header").css({ "margin-bottom": "0px" });
     } else {
       $("#pageWrapper").css({
         "max-height": "initial",
         "min-height": "450px",
         height: "auto"
       });
-      $('.header').css({"margin-bottom":"30px"});
+      $(".header").css({ "margin-bottom": "30px" });
     }
     var headerHeight = $(".header").height();
     $(".content__elem").css({
@@ -28,8 +28,10 @@ $(function() {
     });
   });
 
-  if( screen.width < 991 ) {
-    $(".main-test-block__nav-text").css({"bottom": $("footer").height() + 20 + "px"});
+  if (screen.width < 991) {
+    $(".main-test-block__nav-text").css({
+      bottom: $("footer").height() + 20 + "px"
+    });
   }
 
   var sliderContent = $(".main-test-block__content").children().length;
@@ -150,12 +152,58 @@ $(function() {
     return false;
   });
 
-  $.fancybox.open({
-    src: "#modal-js",
-    type: "inline"
-});
+  // Ввод только цифр и точки
+  $(".onlyDigits").on("change keyup input keydown click", function(e) {
+    if (this.value.match(/[^\d\.]/g)) {
+      this.value = this.value.replace(/[^\d\.]/g, "");
+    }
+  });
+  $("#pool--length").on("change input", function() {
+    if ($(this).val() > 8) {
+      $(this).val(8);
+    }
+  });
+  $("#pool--width").on("change input", function() {
+    if ($(this).val() > 20) {
+      $(this).val(20);
+    }
+  });
+  $("#pool-height").on("change input", function() {
+    if ($(this).val() > 3.6) {
+      $(this).val(3.6);
+    }
+  });
 
-  
+  $('#form-callback').on('submit', function(){
+    if ($('.callback-form__input').hasClass('invalid')) {
+      $('.callback-form__submit-btn').attr('disabled', true);
+      $('.callback-form__submit-btn').css({cursor: "not-allowed"});
+      return false;
+    } else {
+      $('.callback-form__submit-btn').attr('disabled', false);
+      $('.callback-form__submit-btn').css({cursor: "default"});
+    }
+  });
+
+
+  // Перключение слайда по enter
+  $(".onlyDigits").keydown(function(e) {
+    if (e.keyCode === 13 || e.keyCode == 9) {
+      var obj = $(".nav-elem.active").attr("rel");
+      obj++;
+      if (obj === 0) {
+        $(".nav-text-alem__prev").removeClass("active");
+      } else {
+        $(".nav-text-alem__prev").addClass("active");
+      }
+      if (obj === 5) {
+        $(".main-test-block__nav-dots").fadeOut();
+        $(".main-test-block__nav-text").fadeOut();
+      }
+      nextSlide(obj);
+      return false;
+    }
+  });
 });
 
 function prevSlide(obj) {

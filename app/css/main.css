@@ -264,11 +264,12 @@ button {
   height: 100%;
   z-index: 4;
   display: none;
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 0px 15px; }
   .main-test-block__nav-dots {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 15px;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -1057,7 +1058,11 @@ html .polzunok-container-3 .ui-button.ui-state-disabled:active {
     line-height: 33px;
     letter-spacing: 0.015em;
     color: #FFFFFF;
-    margin-left: 30px; }
+    margin-left: 30px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     .label .label-text.bold {
       font-family: 'Exo 2', sans-serif;
       font-style: normal;
@@ -1100,7 +1105,7 @@ html .polzunok-container-3 .ui-button.ui-state-disabled:active {
           transform: translateY(-50%);
   left: -30px;
   height: 25px;
-  width: 25px;
+  width: 26px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   border: 1px solid #FFFFFF;
