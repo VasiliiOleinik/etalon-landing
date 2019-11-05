@@ -3,19 +3,21 @@ append content
 	main.main
 		.box
 			.main-content
-				h1(class="main-content__title") Получите автоматический расчет <br/> стоимости строительства хаммама за 1 минуту
+				h1(class="main-content__title") Получите автоматический расчет <br/> стоимости строительства хамамов и СПА-зон за 1 минуту
 				span(class="main-content__subtitle") Пройдите короткий опрос и получите скидку на <br/> комплект оборудования
-				button(class="how-it-cost" id="how-it-cost-js") Узнать стоимость
+				button(class="how-it-cost" id="how-it-cost-js")
+					span Узнать стоимость
 	.main-test-block.slider
 		.main-test-block__nav-dots
 		.main-test-block__nav-text
 			.nav-text-alem__prev
 				span Назад
+			.nav-text-elem_circle
 			.nav-text-alem__next.active
 				span Далее
-		.main-test-block__content
+		form.main-test-block__content(action=""  id="main-form")
 			.content__elem(class="first")
-				span(class="test-block__title") Шаг 1. Укажите размеры
+				span(class="test-block__title") Шаг 1. Укажите размеры хаммама
 				.intractive-pool
 					.pool
 						.polzunok-container.polzunok-container-1
@@ -32,10 +34,10 @@ append content
 							input(class="onlyDigits input-pool-dimensions" id="pool--width" type="text" value="10")
 						.input-interactive.-height
 							.text-interactive Высота
-							input(class="onlyDigits input-pool-dimensions" id="pool-height" type="text" value="1")
+							input(class="onlyDigits input-pool-dimensions" id="pool-height" type="text" value="0.8")
 						.poolarea#poolarea
 			.content__elem(class="second")
-				span(class="test-block__title") Шаг 2. Когда планируете строительство?
+				span(class="test-block__title") Шаг 2. Когда планируете строительство хаммама?
 				.content
 					label.label
 						input(id="this-month" name="radio-date" type="radio" value="В этом месяце" checked)
@@ -46,15 +48,15 @@ append content
 						span(class="custom-radio")
 						span(class="label-text") В течение 1 - 3 месяцев
 					label.label
-						input(id="1-3-month" name="radio-date" type="radio" value="В течение 1 - 3 месяцев")
+						input(id="1-6-month" name="radio-date" type="radio" value="В течение 1 - 6 месяцев")
 						span(class="custom-radio")
-						span(class="label-text") В течение 1 - 3 месяцев
+						span(class="label-text") В течение 1 - 6 месяцев
 					label.label
 						input(id="more-6" name="radio-date" type="radio" value="Более 6 месяцев")
 						span(class="custom-radio")
 						span(class="label-text") Более 6 месяцев
 			.content__elem(class="third")
-				span(class="test-block__title") Шаг 3. Выберите производителя оборудования
+				span(class="test-block__title") Шаг 3. Выберите производителя оборудования для хаммамов
 				.content
 					.content-section
 						label.label
@@ -84,7 +86,7 @@ append content
 							span(class="label-text bold") Индивидуальный
 						span(class="additional-text") Требуется выезд инженера компании ЭТАЛОНЪ на ваш объект.
 			.content__elem(class="fourth")
-				span(class="test-block__title") Шаг 4. Где будет расположен хамам?
+				span(class="test-block__title") Шаг 4. Где будет расположен хаммам?
 				.content
 					label.label
 						input(id="in-flat" name="radio-place" type="radio" value="В Квартире")
@@ -103,39 +105,40 @@ append content
 						span(class="custom-radio")
 						span(class="label-text") В Аква-парке
 			.content__elem(class="fifth")
-				span(class="test-block__title") Шаг 5. Куда вам прислать расчет?
+				span(class="test-block__title") Шаг 5. Куда вам прислать расчет стоимости хаммама?
 				.content
 					.content-section
 						label.label
-							input(id="in-flat" name="radio-place" type="radio" value="В Квартире")
+							input(id="phone" name="radio-msg" type="radio" value="Телефон")
 							span(class="custom-radio")
 							span(class="label-text")
-								img(src="img/phone-ico.png", alt="Phone")
+								img(src="img/phone-ico.svg", alt="Phone")
 								| Телефон
 					.content-section
 						label.label
-							input(id="private-house" name="radio-place" type="radio" value="В Частном доме / на даче" checked)
+							input(id="whatsApp" name="radio-msg" type="radio" value="WhatsApp" checked)
 							span(class="custom-radio")
 							span(class="label-text")
-								img(src="img/whats-app-ico.png", alt="WhatsApp")
+								img(src="img/whats-app-ico.svg", alt="WhatsApp")
 								| WhatsApp
 					.content-section
 						label.label
-							input(id="fitness-centre" name="radio-place" type="radio" value="В Фитнес-центре")
+							input(id="telegram" name="radio-msg" type="radio" value="Telegram")
 							span(class="custom-radio")
 							span(class="label-text") 
-								img(src="img/telegram-ico.png", alt="Telegram")
+								img(src="img/telegram-ico.svg", alt="Telegram")
 								| Telegram
 					.content-section
 						label.label
-							input(id="aqua-park" name="radio-place" type="radio" value="В Аква-парке")
+							input(id="sms" name="radio-msg" type="radio" value="SMS")
 							span(class="custom-radio")
 							span(class="label-text")
-								img(src="img/sms-ico.png", alt="SMS")
+								img(src="img/sms-ico.svg", alt="SMS")
 								| SMS
 			.content__elem(class="sixth")
 				span(class="test-block__title") Расчет стоимости строительства хаммама готов!
 				span(class="test-block__subtitle")  Введите свой номер телефона и получите расчет и скидку за прохождение теста
 				.final-form
-					input(class="final-form__input" type="text" placeholder="Введите телефонный номер*")
-					button(class="final-form__submit-btn" type="submit") Узнать стоимость
+					input(class="final-form__input" type="text" name="phone" placeholder="Введите телефонный номер*" autocomplete="off")
+					button(class="final-form__submit-btn" type="submit") 
+						span Узнать стоимость

@@ -130,11 +130,14 @@
 			opacity: 0.7
 
 			&:after
-				content: url(../img/big-arrow.png)
+				content: ""
+				background-image: url(../img/big-arrow.png)
 				display: block
 				position: absolute
 				left: calc(100% + 60px)
 				top: -30px
+				width: 9px
+				height: 84px
 				transform: rotate(-90deg)
 
 			&:hover,
@@ -157,10 +160,13 @@
 			opacity: 0.7
 
 			&:before
-				content: url(../img/big-arrow.png)
+				content: ""
+				background-image: url(../img/big-arrow.png)
 				display: block
 				position: absolute
 				right: calc(100% + 60px)
+				width: 9px
+				height: 84px
 				top: -30px
 				transform: rotate(90deg)
 
@@ -183,6 +189,8 @@
 			display: flex
 			flex-direction: column
 			align-items: center
+			position: absolute
+			// display: none
 
 			& .test-block__title
 				font-family: 'Exo 2', sans-serif
@@ -197,11 +205,16 @@
 				text-align: center
 				justify-content: center
 				align-items: center
-				margin-bottom: 150px
+				margin-bottom: 100px
+				padding: 0px 15px
 
 			&.first
 				display: flex
 				border-radius: 30px 30px 0px 0px
+			
+			&.third 
+				& .test-block__title
+					margin-bottom: 60px
 
 .intractive-pool
 	width: 100%
@@ -211,15 +224,15 @@
 	position: relative
 	margin-left: auto
 	margin-right: auto
-	width: 534.27px
-	height: 360.8px
+	width: 531.27px
+	height: 353px
 	border: 2px solid #FFFFFF
 	box-sizing: border-box
 	border-radius: 21px
 .poolarea
 	position: absolute
-	width: 270px
-	height: 155px
+	height: 152.891px
+	width: 263.125px
 	left: 0px
 	top: 0px
 	-webkit-box-sizing: border-box
@@ -435,12 +448,6 @@ html .polzunok-container-3 .ui-button.ui-state-disabled:active
 		justify-content: flex-start
 		align-items: flex-start
 
-	&.active
-		display: flex
-
-		& .content
-			display: flex
-
 		& .label
 			margin-bottom: 65px
 
@@ -452,7 +459,7 @@ html .polzunok-container-3 .ui-button.ui-state-disabled:active
 		align-items: flex-start
 
 		& .content-section
-			margin-bottom: 65px
+			margin-bottom: 35px
 			display: flex
 			flex-direction: column
 			justify-content: flex-start
@@ -553,10 +560,11 @@ html .polzunok-container-3 .ui-button.ui-state-disabled:active
 		border-top: 1px solid rgba(255, 255, 255, 0.6)
 		padding-top: 25px
 		margin-bottom: 65px
-	
+
 	& .final-form
 		width: 100%
 		display: flex
+		position: relative
 
 		&__input
 			width: 496.07px
@@ -583,7 +591,7 @@ html .polzunok-container-3 .ui-button.ui-state-disabled:active
 			&:focus
 				transition: .2s
 				background: rgba(0, 0, 0, 0.41)
-		
+
 		&__submit-btn
 			width: 269px
 			height: 68.9px
@@ -606,7 +614,7 @@ html .polzunok-container-3 .ui-button.ui-state-disabled:active
 				transition: .2s
 				background-color: rgba(58, 190, 194, .2)
 
-		
+
 .label
 	position: relative
 
@@ -673,3 +681,14 @@ html .polzunok-container-3 .ui-button.ui-state-disabled:active
 		display: none
 
 
+label.invalid
+	position: absolute
+	left: 20px
+	top: calc(100% + 10px)
+	color: #ec5a5a
+
+input.invalid
+	border-color: #ec5a5a !important
+
+.nav-text-elem_circle
+	display: none

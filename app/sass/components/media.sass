@@ -1,9 +1,33 @@
-.page-wrapper
-	min-height: 1000px
+.main-test-block__nav-text
+	top: initial
+	bottom: 100px
+	right: 50%
+	transform: translateX(50%)
+	flex-direction: row
+	z-index: 9999
+	align-items: center
 
-@media (max-height: 750px)
+.main-test-block__nav-text .nav-text-alem__prev,
+.main-test-block__nav-text .nav-text-alem__next
+	transform: rotate(0deg)
+	margin: 0 auto
+
+.main-test-block__nav-text .nav-text-alem__prev
+	margin-right: 15px
+
+.main-test-block__nav-text .nav-text-alem__next
+	margin-left: 15px
+
+.page-wrapper
+	max-height: 850px
+	height: 100%
+	min-height: initial
+
+@media (max-height: 830px)
 	.page-wrapper
-		min-height: 900px
+		max-height: 850px
+		height: 100%
+		min-height: 830px
 
 	.main-test-block__content .content__elem .test-block__title
 		margin-bottom: 80px
@@ -15,23 +39,19 @@
 	.main-test-block
 		padding: 0px 30px
 
-	.main-test-block__nav-dots
-		left: 30px
-
-	.main-test-block__nav-text
-		right: 30px
-
 @include media( 1050 )
 	.main-test-block__nav-dots
 		left: 15px
-
-	.main-test-block__nav-text
-		right: 15px
 
 	.input-interactive.-height
 		right: -150px
 
 @include media( 991 )
+
+	.poolarea
+		height: 93.734px
+		width: 162.453px
+
 	.header__name-text.name,
 	.header__name-text
 		display: none
@@ -65,24 +85,6 @@
 	.main-test-block__nav-dots
 		display: none
 
-	.main-test-block__nav-text
-		top: initial
-		bottom: 140px
-		right: 50%
-		transform: translateX(50%)
-		flex-direction: row
-		z-index: 9999
-
-	.main-test-block__nav-text .nav-text-alem__prev,
-	.main-test-block__nav-text .nav-text-alem__next
-		transform: rotate(0deg)
-		margin: 0 auto
-
-	.main-test-block__nav-text .nav-text-alem__prev
-		margin-right: 15px
-
-	.main-test-block__nav-text .nav-text-alem__next
-		margin-left: 15px
 
 	.pool
 		width: 328.91px
@@ -90,46 +92,74 @@
 
 	.label .label-text
 		font-size: 18px
-	
+
 	.content__elem.second.active .label,
-	.content__elem.fourth .content .label
+	.content__elem.fourth .content .label,
+	.content__elem.second .content .label
 		margin-bottom: 60px
-	
+
 	.main-test-block__content .content__elem .test-block__title
 		margin-bottom: 120px
-	
+
 	.main-test-block__content .content__elem.third .test-block__title
-		margin-bottom: 60px
-	
+		margin-bottom: 40px
+
 	.label .label-text.bold,
 	.label .label-text.smaller
 		font-size: 18px
-	
+
 	.content__elem.third .content .content-section .label
 		margin-bottom: 10px
-	
-	.content__elem.third .content .content-section 
+
+	.content__elem.third .content .content-section
 		margin-bottom: 40px
 
 		&:last-of-type
 			margin-bottom: 0px
-	
+
 	.content__elem.sixth
 		max-width: 800px
 		margin: 0 auto
-	
+
 	.main-test-block__content .content__elem .test-block__title
 		font-size: 22px
 		margin-bottom: 80px
 		justify-content: center
-	
+
 	.content__elem.sixth .test-block__subtitle
 		margin-bottom: 30px
 
 	.content__elem.sixth
 		padding: 0px 15px
 
+
+	.nav-text-elem_circle
+		display: block
+		width: 38.19px
+		height: 38.19px
+		border: 1px solid #939393
+		box-sizing: border-box
+		border-radius: 50%
+
+	.main-test-block__content .content__elem.sixth .test-block__title
+		margin-bottom: 20px
+		justify-content: flex-start
+		align-items: flex-start
+
+	.page-wrapper
+		max-height: initial
+		min-height: initial
+		height: auto
+
 @include media( 767 )
+
+	.main
+		bottom: 50%
+		transform: translateY(50%)
+
+	.header
+		height: 110px
+
 	.header__contacts .callback-container
 		display: none
 
@@ -183,11 +213,11 @@
 
 	.pool
 		width: 191.27px
-		height: 129.17px
+		height: 127.17px
 
 	.poolarea
-		height: 53.6247px
-		width: 93.625px
+		height: 75.1247px
+		width: 87.3906px
 
 	.input-interactive.-width
 		flex-direction: row
@@ -212,55 +242,56 @@
 
 	.interactive
 		width: auto
-	
+
 	.main-test-block__content .content__elem .test-block__title
 		font-size: 14px
 		margin-bottom: 60px
-	
+
 	.content__elem.fifth .content .content-section:nth-of-type(odd)
 		margin-right: 0px
-	
+
 	.content__elem.fifth .content .content-section
 		width: auto
-	
-	.content__elem.fifth.active .content
+
+	.content__elem.fifth .content
 		justify-content: center
 		align-items: center
 		flex-direction: column
 
 	.content__elem.second.active .label,
-	.content__elem.fourth .content .label
+	.content__elem.fourth .content .label,
+	.content__elem.second .content .label
 		margin-bottom: 40px
-	
+
 	.label .label-text.bold,
 	.label .label-text.smaller,
 	.content__elem.third .content .content-section .additional-text
 		font-size: 11px
-	
+
 	.content__elem.third .content .content-section
 		max-width: 320px
-	
+
 	.footer-content,
 	.footer
 		height: auto
 		padding-top: 20px
 		flex-wrap: wrap
-	
+
 	.content__elem.fifth .content .content-section
 		margin-bottom: 60px
-	
+
 	.content__elem.fifth .content .content-section .label
 		width: 140px
 
 	.content__elem.sixth .final-form
 		flex-direction: column
-	
+
 	.content__elem.sixth .final-form__input
 		margin-bottom: 50px
 
 	.content__elem.sixth
 		max-width: 395px
-	
+
 	.content__elem.sixth .test-block__subtitle
 		font-size: 14px
 		line-height: 19px
@@ -285,15 +316,26 @@
 
 	.input-interactive.-width
 		top: -100px
-	
-	.footer-content 
+
+	.footer-content
 		font-size: 14px
-	
+
 	.footer-copyright
 		order: 1
-	
+
 	.footer-bussines-numbers
 		order: 3
+
+	.main-test-block__nav-text .nav-text-alem__next span,
+	.main-test-block__nav-text .nav-text-alem__prev span
+		margin-top: 15px
+		display: block
+
+	.main-test-block__nav-text .nav-text-alem__next:after
+		left: 35px
+
+	.main-test-block__nav-text .nav-text-alem__prev:before
+		right: 35px
 
 @include media( 650 )
 	.content__elem.sixth .final-form__input,
@@ -315,18 +357,17 @@
 		line-height: 25px
 		letter-spacing: 0.015em
 
-	.main-test-block__nav-text .nav-text-alem__next:after,
-	.main-test-block__nav-text .nav-text-alem__prev:after
-		height: 85px
-	
 	.content__elem.third .content .content-section
 		max-width: 240px
-	
+
 	.content__elem.third .content .content-section .additional-text
 		line-height: 16px
 
 	.custom-radio
 		left: -10px
+
+	.content__elem.sixth .test-block__subtitle
+		margin-bottom: 45px
 
 @include media( 370 )
 	.main-test-block__nav-text .nav-text-alem__next,

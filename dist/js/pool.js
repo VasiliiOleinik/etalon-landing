@@ -23,7 +23,7 @@ $(document).ready(function () {
         min: 2,
         max: 20,
         step: 0.1,
-        start: 5,
+        start: 10,
         change: function change(event, ui) {
             var $spinner = $(this),
                 min = $spinner.spinner('option', 'min'),
@@ -49,7 +49,7 @@ $(document).ready(function () {
         min: 0.4,
         max: 3.6,
         step: 0.4,
-        start: 1,
+        start: 0.8,
         change: function change(event, ui) {
             $('#slider-right').slider('option', 'value', $(this).val());
         },
@@ -84,7 +84,7 @@ $(document).ready(function () {
         min: 0.4,
         max: 3.6,
         step: 0.4,
-        value: 1,
+        value: 0.8,
         slide: function slide(event, ui) {
             $('#pool-height').val(ui.value);
         }
@@ -122,7 +122,16 @@ $(document).ready(function () {
         poolheight = Number(poolheight.replace(/([a-z])/g, ''));
         poolfullheight = Number(poolfullheight.replace(/([a-z])/g, ''));
         tempheight = poolfullheight - poolheight - deltaheight;
-        poolarea.css('height', tempheight + 'px');
-        poolarea.css('width', poolwidth - deltawidth + 'px');
+        if(screen.width <= 991) {
+            poolarea.css('height', tempheight + 3 + 'px');
+            poolarea.css('width', poolwidth - deltawidth + 1 + 'px');
+        }
+        if(screen.width <= 767) {
+            poolarea.css('height', tempheight + 2 + 'px');
+            poolarea.css('width', poolwidth - deltawidth  + 1 + 'px');
+        } else if (screen.width > 991){
+            poolarea.css('height', tempheight + 4 + 'px');
+            poolarea.css('width', poolwidth - deltawidth + 2 + 'px');
+        }
     }
 });
